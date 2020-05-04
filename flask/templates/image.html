@@ -1,0 +1,30 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}YOLOv3 image detector{% endblock %}
+
+{% block navbar %}
+<div class="navbar navbar-fixed-top">
+  <!-- ... -->
+</div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-7">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">YOLOv3 image detector</div>
+                    <div class="panel-body">
+                        <img src="static/uploads/output/{{ filename }}?v={{ current_time }}" style="max-width: 600px; max-height: 400px; margin: 0 auto;" />
+                    </div>
+                    <div class="panel-footer">
+                        <a href="static/uploads/output/{{ filename }}?v={{ current_time }}" target="_blank" class="btn btn-primary">Download</a>
+                        &nbsp;
+                        <a href="/" class="btn btn-primary">Go back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+{% endblock %}
+
+

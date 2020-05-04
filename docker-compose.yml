@@ -1,0 +1,13 @@
+version: "3.3"
+services:
+  yolodetect:
+    build:
+      context: './'
+    networks:
+      - frontend
+      - backend
+    ports:
+      - "49999:80"
+networks:
+  frontend:
+  backend:
