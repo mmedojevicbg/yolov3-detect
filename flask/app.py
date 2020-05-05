@@ -1,7 +1,7 @@
 import os
 import urllib.request
 import glob
-import time;
+import time
 from flask import Flask, flash, request, redirect, render_template
 from werkzeug.utils import secure_filename
 from flask_bootstrap import Bootstrap
