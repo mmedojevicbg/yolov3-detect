@@ -30,10 +30,9 @@ RUN chmod a+x ./weights/download_yolov3_weights.sh && \
 
 WORKDIR /home
 COPY flask /home/flask
+VOLUME /home/flask
 WORKDIR /home/flask
-RUN mkdir /home/flask/static
-RUN mkdir /home/flask/static/uploads
-RUN mkdir /home/flask/static/uploads/output
+RUN mkdir -p /home/flask/static/uploads/output
 
 WORKDIR /home/flask
 ENTRYPOINT [ "python3" ]

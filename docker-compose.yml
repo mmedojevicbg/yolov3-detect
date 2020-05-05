@@ -8,6 +8,8 @@ services:
       - backend
     ports:
       - "49999:80"
+    volumes: 
+      - ./flask:/home/flask
 networks:
   frontend:
   backend:
