@@ -29,7 +29,7 @@ RUN chmod a+x ./weights/download_yolov3_weights.sh && \
     ./weights/download_yolov3_weights.sh
 
 WORKDIR /home
-COPY flask /home/flask
+#COPY flask /home/flask
 VOLUME /home/flask
 WORKDIR /home/flask
 RUN mkdir -p /home/flask/static/uploads/output

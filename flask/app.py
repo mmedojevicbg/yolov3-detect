@@ -40,8 +40,6 @@ def upload_file():
 			weights_file = request.values.get('weights_file')
 			filename = secure_filename(file.filename)
 			filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-			os.system('find /home/flask/static/uploads -type f -print0| xargs -0 rm')
-			os.system('find /home/flask/static/uploads/output -type f -print0| xargs -0 rm')
 			file.save(filepath)
 			detect_cmd = 'cd /home/yolov3 && python3 detect.py --source ' + filepath + ' --cfg cfg/' + weights_file + '.cfg'
 			detect_cmd = detect_cmd + ' --weights weights/' + weights_file + '.pt'
